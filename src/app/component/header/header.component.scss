@@ -1,0 +1,228 @@
+.blackToWhite {
+  background: linear-gradient(90deg, black 35%, transparent 50%),
+    linear-gradient(180deg, black 0, #5c5d5e);
+  background-image: linear-gradient(90deg, 50% black, white);
+}
+.textWhite {
+  color: white;
+  text-transform: uppercase;
+  font-family: Helvetica;
+}
+.ts1 {
+  font-size: 0.8rem;
+}
+.ts2 {
+  font-size: 1rem;
+}
+.container {
+  max-width: 1200px;
+}
+.bg-black {
+  background: black !important;
+  position: relative;
+}
+.icon-sq{
+  position: absolute;
+  top: -25px;
+}
+.iconAdidas {
+  width: 70px;
+  height: 65px;
+  align-items: center;
+  top: -20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  background-image: url("http://network.napco.com/promo-marketing/wp-content/uploads/sites/12/2015/12/adidas-Performance-Logo-Black-Square-transparent-background-300x300.png");
+}
+.iconAdidas1 {
+  width: 70px;
+  height: 65px;
+  align-items: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  background-image: url("http://network.napco.com/promo-marketing/wp-content/uploads/sites/12/2015/12/adidas-Performance-Logo-Black-Square-transparent-background-300x300.png");
+}
+.a {
+  display: flex;
+  width: 100%;
+  height: 48px;
+}
+.search {
+  padding-bottom: 5px !important;
+  padding-top: 5px !important;
+}
+.bag {
+  background-image: url(../../../assets/img/adidas2.PNG);
+  width: 45px;
+  height: 35px;
+}
+.container-fluit {
+  transition: transform 0.5s ease 0.2s;
+  will-change: transform;
+}
+a:hover {
+  background: white;
+  color: black !important;
+  cursor: pointer;
+}
+.bgRD {
+  border-radius: none;
+}
+.group-text {
+  border-radius: 0rem !important;
+}
+.border-rights {
+  border-right: 1px solid white;
+}
+.input-group-text {
+  border: none;
+  border-radius: none;
+}
+.point {
+  cursor: pointer;
+}
+
+.dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.input-group {
+  flex-wrap: nowrap !important;
+}
+.diplays {
+  display: none !important;
+  position: relative;
+  height: 90px;
+}
+
+@media screen and (max-width: 990px) {
+  .mobile {
+    display: none;
+  }
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+  .diplays {
+    display: flex !important;
+  }
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+.colorWhite{
+  color: white !important;
+}
+a:hover{
+  text-decoration: none !important;
+}
+.bg-drop{
+  background: #555556
+}
+.modal-backdrop.fade.in {
+  z-index: -1;
+}
+

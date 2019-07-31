@@ -1,0 +1,116 @@
+<div class="mobile">
+  <div class="container-fluid px-0 fix-top">
+    <div class="blackToWhite ">
+      <div class="textWhite ts1 d-flex justify-content-end container py-2">
+        <a class="border-right px-2 colorWhite">help</a>
+        <a class="border-right px-2">order tracker and returns</a>
+        <a class="border-right px-2">Newsletter Signup</a>
+        <a class="border-right px-2">Creators club</a>
+        <div class="dropdown ">
+          <a class="d-flex align-items-center px-2 colorWhite"  [routerLink]="['/login']"><span class="mr-1"> <i class="fa fa-user-o" aria-hidden="true"></i> </span> {{check ? user : 'LOGIN'}}</a>
+          <div class="dropdown-content">
+              <a class="dropdown-item"  *ngIf="check===true" (click)="logout()">Logout</a>
+              <a class="dropdown-item"  *ngIf="check===true"  [routerLink]="['/info']" >Info</a>
+              <a class="dropdown-item"  *ngIf="check===true" data-toggle="modal" data-target="#ResetPassword" >Reset Password</a>
+              <a class="dropdown-item"  *ngIf="check===false" [routerLink]="['/login']">Login</a>
+              <a class="dropdown-item"  *ngIf="check===false" data-toggle="modal" data-target="#myModal" >Register</a>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluit bg-black">
+    <div class="ml-5 icon-sq" [routerLink]="['/admin']"><app-load1></app-load1></div>
+    <div class="container">
+      <div class="a ">
+        <div class="d-flex justify-content-between w-100">
+          <div class=" textWhite ts2 d-flex  align-items-center">
+            <div class="dropdown">
+              <a class="px-1 h-100 d-flex align-items-center dropbtn" [routerLink]="['/shop/brand/men']">Men</a>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <a class="px-1 h-100 d-flex align-items-center dropbtn" [routerLink]="['/shop/brand/woman']">Women</a>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <a class="px-1 h-100 d-flex align-items-center dropbtn" [routerLink]="['/shop/brand/kids']">
+                <a class="border-rights d-flex align-items-center pr-2"> Kids </a>
+              </a>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <a class="px-1 h-100 d-flex align-items-center dropbtn">Sports</a>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <a class="px-1 h-100 d-flex align-items-center dropbtn">Brands</a>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="input-group md-form form-sm form-1 pl-0 search  d-flex justify-content-end k"
+          >
+            <div class="input-group-prepend  border-right-0 ">
+              <span
+                class="input-group-text purple lighten-3 bg-white bgRD point "
+                id="basic-text1"
+                ><i class="fa fa-search  " aria-hidden="true"></i
+              ></span>
+            </div>
+            <input
+              class=" my-0 py-1 border-0"
+              type="text"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <div class="bag point"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="topnav d-flex justify-content-between bg-black diplays" id="myTopnav">
+    <a  class="openbtn" (click)="openNav()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a><app-load1></app-load1></a>
+
+  <div class="mt-2"><a class="fa fa-search searchs " aria-hidden="true"></a>
+  <a class="bag point "></a>
+</div>
+</div>
+<div id="mySidebar" class="sidebar diplays" style="display: inline !important">
+    <a  class="closebtn" (click)="closeNav()">×</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+    <a href="#">help</a>
+    <a href="#">order tracker and returns</a>
+    <a href="#">Newsletter Signup</a>
+    <a href="#">Creators club</a>
+  </div>
+  <div class="d-flex align-self-center">
+      <app-form-register></app-form-register>
+  </div>

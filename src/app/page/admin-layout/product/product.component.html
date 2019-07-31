@@ -1,0 +1,50 @@
+<div id="admin3">
+<app-edit (sentDT)="show($event)"></app-edit>
+<table class="table table-hover bg-white">
+  <thead>
+    <tr>
+      <th>Id_sp</th>
+      <th>Name</th>
+      <th>Img</th>
+      <th>Price</th>
+      <th>Title</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of product; let i=index">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td><img class="imgAvatar" src="{{item.img}}"></td>
+      <td><img class="imgAvatar" src="{{item.img2}}"></td>
+      <td>{{item.price}}</td>
+      <td>{{item.title}}</td>
+      <td>
+        <a class="fa fa-trash   bg-danger p-2"  aria-hidden="true" (click)="deleteProd(item.id)"></a>
+        <a class="fa fa-wrench bg-warning p-2" data-toggle="modal" data-target="#myModal2" aria-hidden="true" (click)="sentIdUpdate(i)"></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<a class="fa fa-plus bg-success p-2 text-white"   data-toggle="modal" data-target="#myModal3" aria-hidden="true" (click)="addItem()">Add Product</a>
+</div>
+<div class="bg-loading" id="load3">
+    <div
+      id="radial-gradient3"
+      class="radial-gradient"
+      style=""
+    ></div>
+    <div id="demo2"></div>
+    <div class="center-s">
+      <div class="container ">
+        <div class="box"></div>
+      </div>
+    </div>
+  </div> <div class="d-flex align-self-center">
+      <app-form-register (sent)="updateDB($event)"></app-form-register>
+  </div>
+  <div class="success1">
+      <app-form-update [prod]="prod"></app-form-update>
+  </div>
+
+

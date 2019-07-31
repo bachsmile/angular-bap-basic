@@ -1,0 +1,39 @@
+.b{
+  height: 1200px;
+  width: 20px;
+}
+.a{
+  position: fixed;
+  transform: translateY(100%);
+}
+.in{
+  position: absolute;
+  top:0;
+}
+.fix{
+  position: fixed;
+  right: -25px;
+  top:50%;
+  transform:  rotate(-90deg);
+}
+.fulls{
+  position: fixed;
+  animation: mymove1 1s;
+  animation-fill-mode: forwards;
+  z-index: 200;
+}
+.full {
+  position: fixed;
+  animation: mymove 1s;
+  animation-fill-mode: forwards;
+  z-index: 200;
+}
+
+@keyframes mymove {
+  from {top: 0px;}
+  to {top: -100px;}
+}
+@keyframes mymove1 {
+  from {top: -100px;}
+  to {top: 0px;}
+}

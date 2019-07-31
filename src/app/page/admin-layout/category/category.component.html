@@ -1,0 +1,68 @@
+<div id="admin1">
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>idMD</th>
+        <th>CategoryName</th>
+        <th>Parent_id</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of listCategory; let i=index">
+          <td>{{item.idDM}}</td>
+          <td>{{item.DanhMuc}}</td>
+          <td>{{item.parent_id}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
+    Launch
+  </button>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Category</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+              <div class="input row flex-nowrap  py-4">
+                  <label class="mb-0 d-flex align-self-center mr-3">CategoryName</label>
+                  <input name="two" class="ip form-control  pl-3" type="text" placeholder="Name" [(ngModel)]="itemCategory.DanhMuc">
+              </div>
+              <div class="input row flex-nowrap  py-4">
+                  <label class="mb-0 d-flex align-self-center mr-3">parent_id</label>
+                  <input name="two" class="ip form-control  pl-3" type="number" placeholder="number" [(ngModel)]="itemCategory.parentId" >
+              </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="addCategory()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-loading" id="load1">
+    <div
+      id="radial-gradient1"
+      class="radial-gradient1"
+      (mouseout)="clearCoor()"
+      style=""
+    ></div>
+    <div id="demo1"></div>
+    <div class="center-s">
+      <div class="container ">
+        <div class="box"></div>
+      </div>
+    </div>
+  </div>

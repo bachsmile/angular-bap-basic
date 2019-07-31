@@ -1,0 +1,22 @@
+.fixImg{
+  width: 100%;
+}
+.card-titles{
+  opacity: 0.5;
+  font-size: 0.8rem;
+  font-family: AdihausDIN,Helvetica,Arial,sans-serif;
+}
+.card-name, .card-price {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: AdihausDIN,Helvetica,Arial,sans-serif !important;
+  font-weight: 400;
+  color: inherit;
+}
+a{
+  color: gray;
+}
+.bot{
+  position: relative;
+  bottom:   0px;
+}

@@ -1,0 +1,53 @@
+<div id="admin2">
+    <table class="table table-hover ">
+        <thead>
+          <tr>
+            <th>MaID</th>
+            <th>Username</th>
+            <th>Authorities</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Action</th>
+            <th>Subcrice</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of user; let i=index">
+            <td scope="row" >{{item.MaID}}</td>
+            <td>{{item.Username}}</td>
+            <td>{{item.Authorities}}</td>
+            <td>{{item.Firstname}}</td>
+            <td>{{item.Lastname}}</td>
+            <td>{{item.Email}}</td>
+            <td>{{item.Phone}}</td>
+            <td>{{item.Subcrice}}</td>
+            <td>
+              <a class="fa fa-trash   bg-danger p-2"  aria-hidden="true" (click)="deleteUser(item.MaID)"></a>
+              <a class="fa fa-wrench bg-warning p-2" data-toggle="modal" data-target="#myModal1" aria-hidden="true" (click)="sentIdUpdate(i)"></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a class="fa fa-plus bg-success p-2 text-white"   data-toggle="modal" data-target="#myModal" aria-hidden="true" (click)="addItem()">Add user</a>
+</div>
+<div class="bg-loading" id="load2">
+    <div
+      id="radial-gradient2"
+      class="radial-gradient"
+      (mouseout)="clearCoor()"
+      style=""
+    ></div>
+    <div id="demo2"></div>
+    <div class="center-s">
+      <div class="container ">
+        <div class="box"></div>
+      </div>
+    </div>
+  </div> <div class="d-flex align-self-center">
+      <app-form-register (sent)="updateDB($event)"></app-form-register>
+  </div>
+  <div class="success1">
+      <app-form-update [user]="userUd"></app-form-update>
+  </div>

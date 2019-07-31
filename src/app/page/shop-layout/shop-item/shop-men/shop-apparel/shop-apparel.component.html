@@ -1,0 +1,16 @@
+<div class="container">
+    <h5><a [routerLink]="['/shop/brand/men']">Men</a>>> Shoes Apparel</h5>
+    <div class="row"  >
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 my-2" *ngFor="let item of items; let i=index">
+            <div class="card" style="width:100%; height: 100%;">
+              <img id="{{i}}" class="card-img-top" src="{{item.img}}" (mouseenter)="in(i,item.img2)" (mouseleave)="out(i,item.img)">
+              <div class="card-body">
+                <div class="card-titles">{{item.title}}</div>
+                <div class="card-name">{{item.name}}</div>
+                <div class="card-price">{{item.price}}</div>
+                <a href="#" class="btn btn-primary text-warning bot">See Profile</a>
+              </div>
+            </div>
+        </div>
+        </div>
+    </div>
